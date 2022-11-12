@@ -8,7 +8,7 @@ function PopupWithForm(props){
                 {props.children}
                 <input className="popup__save button-hide" type="submit" value="Сохранить"></input>
             </form>
-            <button className="popup__close button-close" type="button" aria-label="кнопка закрытия"></button>
+            <button className="popup__close button-close" type="button" aria-label="кнопка закрытия" onClick={props.onClose}></button>
         </div>
         </div>
       </div>    

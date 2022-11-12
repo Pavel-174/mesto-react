@@ -28,6 +28,12 @@ function App() {
     setIsAddPlacePopupOpen(true);
   }
 
+  function closeAllPopups(){
+    setIsEditAvatarPopupOpen(false);
+    setIsEditProfilePopupOpen(false);
+    setIsAddPlacePopupOpen(false);
+  }
+
 
   return (
     <div className="page">
@@ -42,15 +48,18 @@ function App() {
     <ImagePopup />
     <EditAvatarPopup 
     isOpen={isEditAvatarPopupOpen}
+    onClose={closeAllPopups}
     />
     <AddPlacePopup 
     isOpen={isAddPlacePopupOpen}
+    onClose={closeAllPopups}
     />
     <PopupConfirmDelete 
     // isOpen={}
     />
     <EditProfilePopup 
     isOpen={isEditProfilePopupOpen}
+    onClose={closeAllPopups}
     />
     <template id="template">
         <li className="photo__box" id="element-li">

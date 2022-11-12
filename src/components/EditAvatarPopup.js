@@ -7,6 +7,7 @@ function EditAvatarPopup(props){
         name={'avatar'}
         title={'Обновить аватар'}
         form={'form-avatar'}
+        onClose={props.onClose}
         >
             <input id="avatar" name="user-avatar" type="url" required placeholder="Ссылка на аватар" minLength="5" className="popup__text"></input>
             <span className="popup__text-error popup__text-error_avatar" id="avatar-error">Вы пропустили это поле.</span>
