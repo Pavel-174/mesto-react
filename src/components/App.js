@@ -1,18 +1,57 @@
+import React, { useEffect } from "react";
 import '../index.css';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
 import PopupWithForm from './PopupWithForm';
-import ImagePopup from './ImagePopup'
+import ImagePopup from './ImagePopup';
+import EditAvatarPopup from './EditAvatarPopup';
+import AddPlacePopup from './AddPlacePopup';
+import PopupConfirmDelete from './PopupConfirmDelete';
+import EditProfilePopup from './EditProfilePopup';
 
 function App() {
+  const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
+  const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
+  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
+  
+
+  function handleEditAvatarClick() {
+    setIsEditAvatarPopupOpen(true);
+  }
+
+  function handleEditProfileClick() {
+    setIsEditProfilePopupOpen(true);
+  }
+
+  function handleAddPlaceClick() {
+    setIsAddPlacePopupOpen(true);
+  }
+
+
   return (
     <div className="page">
     <Header />
-    <Main />
+    <Main
+     onEditAvatar={handleEditAvatarClick}
+     onEditProfile={handleEditProfileClick}
+     onAddPlace={handleAddPlaceClick}
+    />
     <Footer />
     <PopupWithForm />
     <ImagePopup />
+    <EditAvatarPopup 
+    isOpen={isEditAvatarPopupOpen}
+    />
+    <AddPlacePopup 
+    isOpen={isAddPlacePopupOpen}
+    />
+    <PopupConfirmDelete 
+    // isOpen={}
+    />
+    <EditProfilePopup 
+    isOpen={isEditProfilePopupOpen}
+    />
     <template id="template">
         <li className="photo__box" id="element-li">
             <img className="photo__image" id="photo__image" src="./images/white.jpg" alt=""></img>
