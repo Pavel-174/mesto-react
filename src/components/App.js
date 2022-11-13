@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import '../index.css';
 import Header from './Header';
 import Main from './Main';
@@ -9,12 +9,27 @@ import EditAvatarPopup from './EditAvatarPopup';
 import AddPlacePopup from './AddPlacePopup';
 import PopupConfirmDelete from './PopupConfirmDelete';
 import EditProfilePopup from './EditProfilePopup';
+import api from "../utils/API";
+import profileImage from '../images/image.jpg';
 
 function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
-  
+
+  const [isUserAvatar, setUserAvatar] = React.useState(profileImage);
+  const [isUserName, setUserName] = React.useState('Жак Ив Кусто');
+  const [isUserDescription, setUserDescription] = React.useState('исследователь океана');
+
+  useEffect(() => {
+    Promise.all([api.getUserInfo()]).then(([data]) => {
+      setUserName(data.name);
+      setUserDescription(data.about);
+      setUserAvatar(data.avatar);
+    }).catch((err) => {
+      console.error(err);
+    });
+  }, []);
 
   function handleEditAvatarClick() {
     setIsEditAvatarPopupOpen(true);
@@ -42,6 +57,9 @@ function App() {
      onEditAvatar={handleEditAvatarClick}
      onEditProfile={handleEditProfileClick}
      onAddPlace={handleAddPlaceClick}
+     userAvatar={isUserAvatar}
+     userName={isUserName}
+     userDescription={isUserDescription}
     />
     <Footer />
     <PopupWithForm />
@@ -74,7 +92,7 @@ function App() {
             </div>
         </li>
     </template>
-  </div>
+    </div>
   );
 }
 
