@@ -7,10 +7,10 @@ function PopupConfirmDelete(props){
         name={'delete'}
         title={'Вы уверены?'}
         form={'form-delete'}
+        buttonTitle={'Да'}
         onClose={props.onClose}
         >
             <input id="deleted" name="confirm-delete" type="hidden" required className="popup__text"></input>
-            <input className="popup__save popup__save_valid button-hide" type="submit" value="Да"></input>
         </PopupWithForm>
     )    
 }

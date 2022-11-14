@@ -7,6 +7,7 @@ function EditProfilePopup(props){
         name={'profile'}
         title={'Редактировать профиль'}
         form={'name-profession'}
+        buttonTitle={'Сохранить'}
         onClose={props.onClose}
         >
             <input required className="popup__text" id="popup__name" type="text" placeholder="Имя" name="name" minLength="2" maxLength="40"></input>
