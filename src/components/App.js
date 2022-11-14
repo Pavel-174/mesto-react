@@ -16,16 +16,20 @@ function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
+  const [selectedCard, setSelectedCard] = React.useState(null);
 
   const [isUserAvatar, setUserAvatar] = React.useState(profileImage);
   const [isUserName, setUserName] = React.useState('Жак Ив Кусто');
   const [isUserDescription, setUserDescription] = React.useState('исследователь океана');
 
+  const [cards, setCards] = React.useState([]);
+
   useEffect(() => {
-    Promise.all([api.getUserInfo()]).then(([data]) => {
+    Promise.all([api.getUserInfo(), api.getInitialCards()]).then(([data, cards]) => {
       setUserName(data.name);
       setUserDescription(data.about);
       setUserAvatar(data.avatar);
+      setCards(cards);
     }).catch((err) => {
       console.error(err);
     });
@@ -43,10 +47,15 @@ function App() {
     setIsAddPlacePopupOpen(true);
   }
 
+  function handleCardClick(card) {
+    setSelectedCard(card);
+  }
+
   function closeAllPopups(){
     setIsEditAvatarPopupOpen(false);
     setIsEditProfilePopupOpen(false);
     setIsAddPlacePopupOpen(false);
+    setSelectedCard(null);
   }
 
 
@@ -57,13 +66,18 @@ function App() {
      onEditAvatar={handleEditAvatarClick}
      onEditProfile={handleEditProfileClick}
      onAddPlace={handleAddPlaceClick}
+     onCardClick={handleCardClick}
      userAvatar={isUserAvatar}
      userName={isUserName}
      userDescription={isUserDescription}
+     cards={cards}
     />
     <Footer />
     <PopupWithForm />
-    <ImagePopup />
+    <ImagePopup 
+    card={selectedCard}
+    onClose={closeAllPopups}
+    />
     <EditAvatarPopup 
     isOpen={isEditAvatarPopupOpen}
     onClose={closeAllPopups}
@@ -79,19 +93,6 @@ function App() {
     isOpen={isEditProfilePopupOpen}
     onClose={closeAllPopups}
     />
-    <template id="template">
-        <li className="photo__box" id="element-li">
-            <img className="photo__image" id="photo__image" src="./images/white.jpg" alt=""></img>
-            <button className="photo__delete" type="button" aria-label="кнопка удалить"></button>
-            <div className="photo__text-box">
-                <h2 className="photo__text" id="photo__text"></h2>
-                <div className="photo__like-box">
-                    <button className="photo__like" type="button" aria-label="кнопка лайк"></button>
-                    <p className="photo__like-count">0</p>
-                </div>
-            </div>
-        </li>
-    </template>
     </div>
   );
 }

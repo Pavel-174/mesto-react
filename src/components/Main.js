@@ -1,4 +1,5 @@
 import addCardButton from '../images/Vector2.svg';
+import Card from './Card'
 
 function Main(props, {userAvatar, userName, userDescription}) {
     return(
@@ -21,6 +22,15 @@ function Main(props, {userAvatar, userName, userDescription}) {
             </section>
             <section className="photos">
                 <ul className="photos__container" id="element-ul">
+                {props.cards.map((card, id) => (
+            <Card
+              key={id}
+              card={card}
+              link={card.link}
+              name={card.name}
+              onCardClick={props.onCardClick}
+            />
+          ))}
                 </ul>
             </section>
         </main>
