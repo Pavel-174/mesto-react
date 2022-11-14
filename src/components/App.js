@@ -61,38 +61,38 @@ function App() {
 
   return (
     <div className="page">
-    <Header />
-    <Main
-     onEditAvatar={handleEditAvatarClick}
-     onEditProfile={handleEditProfileClick}
-     onAddPlace={handleAddPlaceClick}
-     onCardClick={handleCardClick}
-     userAvatar={isUserAvatar}
-     userName={isUserName}
-     userDescription={isUserDescription}
-     cards={cards}
-    />
-    <Footer />
-    <PopupWithForm />
-    <ImagePopup 
-    card={selectedCard}
-    onClose={closeAllPopups}
-    />
-    <EditAvatarPopup 
-    isOpen={isEditAvatarPopupOpen}
-    onClose={closeAllPopups}
-    />
-    <AddPlacePopup 
-    isOpen={isAddPlacePopupOpen}
-    onClose={closeAllPopups}
-    />
-    <PopupConfirmDelete 
-    // isOpen={}
-    />
-    <EditProfilePopup 
-    isOpen={isEditProfilePopupOpen}
-    onClose={closeAllPopups}
-    />
+      <Header />
+      <Main
+        onEditAvatar={handleEditAvatarClick}
+        onEditProfile={handleEditProfileClick}
+        onAddPlace={handleAddPlaceClick}
+        onCardClick={handleCardClick}
+        userAvatar={isUserAvatar}
+        userName={isUserName}
+        userDescription={isUserDescription}
+        cards={cards}
+      />
+      <Footer />
+      <PopupWithForm />
+      <ImagePopup 
+        card={selectedCard}
+        onClose={closeAllPopups}
+       />
+      <EditAvatarPopup 
+        isOpen={isEditAvatarPopupOpen}
+        onClose={closeAllPopups}
+      />
+      <AddPlacePopup 
+        isOpen={isAddPlacePopupOpen}
+        onClose={closeAllPopups}
+      />
+      <PopupConfirmDelete 
+      // isOpen={}
+      />
+      <EditProfilePopup 
+        isOpen={isEditProfilePopupOpen}
+        onClose={closeAllPopups}
+      />
     </div>
   );
 }
