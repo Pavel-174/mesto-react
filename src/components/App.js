@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import '../index.css';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
@@ -9,7 +8,7 @@ import EditAvatarPopup from './EditAvatarPopup';
 import AddPlacePopup from './AddPlacePopup';
 import PopupConfirmDelete from './PopupConfirmDelete';
 import EditProfilePopup from './EditProfilePopup';
-import api from "../utils/API";
+import api from "../utils/api";
 import profileImage from '../images/image.jpg';
 
 function App() {

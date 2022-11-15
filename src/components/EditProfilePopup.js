@@ -3,12 +3,12 @@ import PopupWithForm from "./PopupWithForm";
 function EditProfilePopup(props){
     return(
         <PopupWithForm
-        isOpen={props.isOpen}
-        name={'profile'}
-        title={'Редактировать профиль'}
-        form={'name-profession'}
-        buttonTitle={'Сохранить'}
-        onClose={props.onClose}
+          isOpen={props.isOpen}
+          name={'profile'}
+          title='Редактировать профиль'
+          form={'name-profession'}
+          buttonTitle='Сохранить'
+          onClose={props.onClose}
         >
             <input required className="popup__text" id="popup__name" type="text" placeholder="Имя" name="name" minLength="2" maxLength="40"></input>
             <span className="popup__text-error popup__text-error_name" id="popup__name-error"></span>

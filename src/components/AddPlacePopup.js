@@ -3,12 +3,13 @@ import PopupWithForm from "./PopupWithForm";
 function AddPlacePopup(props){
     return(
         <PopupWithForm
-        isOpen={props.isOpen}
-        name={'type_photo'}
-        title={'Новое место'}
-        form={'photo-add'}
-        buttonTitle={'Сохранить'}
-        onClose={props.onClose}
+
+          isOpen={props.isOpen}
+          name={'type_photo'}
+          title='Новое место'
+          form={'photo-add'}
+          buttonTitle='Сохранить'
+          onClose={props.onClose}
         >
             <input required className="popup__text" id="popup__place" type="text" placeholder="Название" name="card-name" minLength="2" maxLength="30"></input>
             <span className="popup__text-error popup__text-error_place" id="popup__place-error"> </span>
