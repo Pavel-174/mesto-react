@@ -8,7 +8,7 @@ import EditAvatarPopup from './EditAvatarPopup';
 import AddPlacePopup from './AddPlacePopup';
 import PopupConfirmDelete from './PopupConfirmDelete';
 import EditProfilePopup from './EditProfilePopup';
-import api from "../utils/api";
+import {api} from "../utils/api";
 import profileImage from '../images/image.jpg';
 
 function App() {
