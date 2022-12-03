@@ -1,4 +1,5 @@
 .photo__delete{
+  display: none;
   min-width: 18px;
   min-height: 19px;
   background: url(../../../images/Group.png);
