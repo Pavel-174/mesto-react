@@ -60,7 +60,7 @@ function App() {
   }
 
   function handleCardDelete(card) {
-    api.removeCard(card).then(() => {
+    api.removeCard(card._id).then(() => {
       setCards((items) => items.filter((c) => c._id !== card._id && c));
     }).catch((err) => {
       console.error(err);
@@ -138,20 +138,13 @@ function App() {
     <div className="page">
       <Header />
       <Main
-        // onEditAvatar={handleEditAvatarClick}
-        // onEditProfile={handleEditProfileClick}
-        // onAddPlace={handleAddPlaceClick}
-        // onCardClick={handleCardClick}
-        // cards={cards}
-        // onCardLike={handleCardLike}
-        // onCardDelete={handleCardDelete}
         onEditAvatar={handleEditAvatarClick}
-            onEditProfile={handleEditProfileClick}
-            onAddPlace={handleAddPlaceClick}
-            onCardClick={handleCardClick}
-            cards={cards}
-            onCardLike={handleCardLike}
-            onCardDelete={handleCardDelete}
+        onEditProfile={handleEditProfileClick}
+        onAddPlace={handleAddPlaceClick}
+        onCardClick={handleCardClick}
+        cards={cards}
+        onCardLike={handleCardLike}
+        onCardDelete={handleCardDelete}
       />
       <Footer />
       <PopupWithForm />
