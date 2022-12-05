@@ -64,17 +64,18 @@ class Api {
         .then(res => this._checkResponse(res));
     }
   
-    addNewCard(name, link) {
-      return fetch(this._baseUrl + '/cards', {
+    addNewCard(data) {
+      const requestUrl = this._baseUrl + '/cards';
+      return fetch(requestUrl, {
         method: 'POST',
         headers: this._headers,
         body: JSON.stringify({
-          name: name,
-          link: link
+          name: data.name,
+          link: data.link
         })
-      })
-        .then(res => this._checkResponse(res));
+      }).then(this._checkResponse);
     }
+  
   
     removeCard(cardId) {
       return fetch(this._baseUrl + '/cards/' + cardId, {

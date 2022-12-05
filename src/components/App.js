@@ -9,7 +9,6 @@ import AddPlacePopup from './AddPlacePopup';
 import PopupConfirmDelete from './PopupConfirmDelete';
 import EditProfilePopup from './EditProfilePopup';
 import api from '../utils/api.js';
-// import profileImage from '../images/image.jpg';
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
 function App() {
@@ -161,8 +160,8 @@ function App() {
       <AddPlacePopup 
         isOpen={isAddPlacePopupOpen}
         onClose={closeAllPopups}
+        onCloseClick={handlePopupCloseClick}
         onSubmit={handleAddPlaceSubmit}
-        onCloseClick={handlePopupCloseClick} 
       />
       <PopupConfirmDelete 
       // isOpen={}
