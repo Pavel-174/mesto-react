@@ -76,8 +76,8 @@ function App() {
     });
   }
   
-  function handleAvatarUpdate(data) {
-    api.updateProfileAvatar(data).then((newAvatar) => {
+  function handleUpdateAvatar(data) {
+    api.setUserAvatar(data).then((newAvatar) => {
       setCurrentUser(newAvatar);
       closeAllPopups();
     }).catch((err) => {
@@ -155,7 +155,8 @@ function App() {
       <EditAvatarPopup 
         isOpen={isEditAvatarPopupOpen}
         onClose={closeAllPopups}
-        onCloseClick={handlePopupCloseClick} 
+        onCloseClick={handlePopupCloseClick}
+        onSubmit={handleUpdateAvatar}
       />
       <AddPlacePopup 
         isOpen={isAddPlacePopupOpen}
