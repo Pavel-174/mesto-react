@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/Pavel-174/mesto-react/static/css/main.5aaf5e23.css",
-    "main.js": "/Pavel-174/mesto-react/static/js/main.7f118476.js",
-    "static/js/787.5530211c.chunk.js": "/Pavel-174/mesto-react/static/js/787.5530211c.chunk.js",
-    "static/media/Inter-Medium.woff?v=3.19": "/Pavel-174/mesto-react/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
-    "static/media/Inter-Black.woff?v=3.19": "/Pavel-174/mesto-react/static/media/Inter-Black.c6938660eec019fefd68.woff",
-    "static/media/Inter-Regular.woff?v=3.19": "/Pavel-174/mesto-react/static/media/Inter-Regular.8c206db99195777c6769.woff",
-    "static/media/Inter-Medium.woff2?v=3.19": "/Pavel-174/mesto-react/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
-    "static/media/Inter-Black.woff2?v=3.19": "/Pavel-174/mesto-react/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
-    "static/media/Inter-Regular.woff2?v=3.19": "/Pavel-174/mesto-react/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
-    "static/media/logo.svg": "/Pavel-174/mesto-react/static/media/logo.bc3450ffaa676172ae9a1ed3be59d4df.svg",
-    "index.html": "/Pavel-174/mesto-react/index.html",
-    "static/media/like.svg": "/Pavel-174/mesto-react/static/media/like.1ad06e85f169668a1f36.svg",
-    "static/media/Union.svg": "/Pavel-174/mesto-react/static/media/Union.35948469632d0421d697.svg",
-    "static/media/Vector.svg": "/Pavel-174/mesto-react/static/media/Vector.6c7bf05444b9793fdf6e.svg",
-    "static/media/pen.svg": "/Pavel-174/mesto-react/static/media/pen.ae1a976ddb506239e9f0.svg",
-    "static/media/CloseIcon.svg": "/Pavel-174/mesto-react/static/media/CloseIcon.039f1f5203f653b4bacd.svg",
-    "static/media/Vector2.svg": "/Pavel-174/mesto-react/static/media/Vector2.bed8c136e13907f5eefb86d62a5fe29e.svg",
-    "main.5aaf5e23.css.map": "/Pavel-174/mesto-react/static/css/main.5aaf5e23.css.map",
-    "main.7f118476.js.map": "/Pavel-174/mesto-react/static/js/main.7f118476.js.map",
-    "787.5530211c.chunk.js.map": "/Pavel-174/mesto-react/static/js/787.5530211c.chunk.js.map"
+    "main.css": "/mesto-react/static/css/main.964f08f5.css",
+    "main.js": "/mesto-react/static/js/main.12588b98.js",
+    "static/js/787.5530211c.chunk.js": "/mesto-react/static/js/787.5530211c.chunk.js",
+    "static/media/Inter-Medium.woff?v=3.19": "/mesto-react/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
+    "static/media/Inter-Black.woff?v=3.19": "/mesto-react/static/media/Inter-Black.c6938660eec019fefd68.woff",
+    "static/media/Inter-Regular.woff?v=3.19": "/mesto-react/static/media/Inter-Regular.8c206db99195777c6769.woff",
+    "static/media/Inter-Medium.woff2?v=3.19": "/mesto-react/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
+    "static/media/Inter-Black.woff2?v=3.19": "/mesto-react/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
+    "static/media/Inter-Regular.woff2?v=3.19": "/mesto-react/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
+    "static/media/logo.svg": "/mesto-react/static/media/logo.bc3450ffaa676172ae9a1ed3be59d4df.svg",
+    "index.html": "/mesto-react/index.html",
+    "static/media/like.svg": "/mesto-react/static/media/like.1ad06e85f169668a1f36.svg",
+    "static/media/Union.svg": "/mesto-react/static/media/Union.35948469632d0421d697.svg",
+    "static/media/Vector.svg": "/mesto-react/static/media/Vector.6c7bf05444b9793fdf6e.svg",
+    "static/media/pen.svg": "/mesto-react/static/media/pen.ae1a976ddb506239e9f0.svg",
+    "static/media/CloseIcon.svg": "/mesto-react/static/media/CloseIcon.039f1f5203f653b4bacd.svg",
+    "static/media/Vector2.svg": "/mesto-react/static/media/Vector2.bed8c136e13907f5eefb86d62a5fe29e.svg",
+    "main.964f08f5.css.map": "/mesto-react/static/css/main.964f08f5.css.map",
+    "main.12588b98.js.map": "/mesto-react/static/js/main.12588b98.js.map",
+    "787.5530211c.chunk.js.map": "/mesto-react/static/js/787.5530211c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5aaf5e23.css",
-    "static/js/main.7f118476.js"
+    "static/css/main.964f08f5.css",
+    "static/js/main.12588b98.js"
   ]
 }
