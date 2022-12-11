@@ -16,6 +16,3 @@ function PopupWithForm(props){
 }
 
 export default PopupWithForm;
-
-// 
-// className="popup__save popup__save_invalid button-hide"
